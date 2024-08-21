@@ -34,7 +34,7 @@ const Timer = () => {
   };
 
   const handleDurationChange = (e) => {
-    const newDuration = Math.max(1, parseInt(e.target.value) || 0);
+    const newDuration = Math.max(1, Math.min(60, parseInt(e.target.value) || 0));
     setDuration(newDuration);
     if (!isActive) {
       setTime(newDuration * 60);
@@ -46,7 +46,6 @@ const Timer = () => {
 
   return (
     <div className="timer-widget">
-      <h1 className="timer-title">Notion Timer</h1>
       <div className="timer-container">
         <div className="timer-face">
           <div 
