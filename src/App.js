@@ -1,10 +1,10 @@
 import React from 'react';
 import Timer from './Timer';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Notion Timer</h1>
       <Timer />
     </div>
   );
